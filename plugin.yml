@@ -1,0 +1,7 @@
+name: Plants
+version: 1.0.0
+author: Stexjy
+main: stexjy.plants.main.PlantsMain
+api-version: 1.14
+commands:
+  plants:
