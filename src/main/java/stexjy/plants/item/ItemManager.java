@@ -9,7 +9,7 @@ import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 
 import net.md_5.bungee.api.ChatColor;
-import stexjy.plants.main.PlantsMain;
+import stexjy.plants.PlantsMain;
 import stexjy.plants.plants.PlantsType;
 
 public class ItemManager {

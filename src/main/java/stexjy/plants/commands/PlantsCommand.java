@@ -41,7 +41,7 @@ public class PlantsCommand implements CommandExecutor {
 		Player player = Bukkit.getPlayer(args[1]);
 		
 		if(player == null) {
-			
+			    
 			sender.sendMessage(ChatColor.RED + "The given player is not online!");
 			
 			return;

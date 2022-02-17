@@ -1,4 +1,4 @@
-package stexjy.plants.main;
+package stexjy.plants;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
