@@ -31,6 +31,7 @@ public class ItemManager {
 		ItemMeta meta = item.getItemMeta();
 		
 		meta.setDisplayName(ChatColor.GREEN + type.getName());
+		setDataContainer(meta, type.getName());
 		
 		item.setItemMeta(meta);
 		
@@ -42,7 +43,7 @@ public class ItemManager {
 		
 		PersistentDataContainer dataContainer = meta.getPersistentDataContainer();
 		
-		NamespacedKey key = new NamespacedKey(PlantsMain.getInstance(), "plant");
+		NamespacedKey key = new NamespacedKey(PlantsMain.getInstance(), "plantName");
 		
 		dataContainer.set(key, PersistentDataType.STRING, stringPlantsType);
 		

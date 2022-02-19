@@ -1,8 +1,11 @@
 package stexjy.plants;
 
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import stexjy.plants.commands.PlantsCommand;
+import stexjy.plants.events.PotPlacedEvent;
 
 public class PlantsMain extends JavaPlugin {
 	
@@ -13,6 +16,7 @@ public class PlantsMain extends JavaPlugin {
 		instance = this;
 		
 		registerCommands();
+		registerEvents();
 		
 	}
 	
@@ -22,9 +26,17 @@ public class PlantsMain extends JavaPlugin {
 		
 	}
 	
-	public void registerCommands() {
+	private void registerCommands() {
 		
 		getCommand("plants").setExecutor(new PlantsCommand());
+		
+	}
+	
+	private void registerEvents() {
+		
+		PluginManager pm = Bukkit.getPluginManager();
+		
+		pm.registerEvents(new PotPlacedEvent(), this);
 		
 	}
 	
